@@ -33,10 +33,12 @@
 // }
 
 // export default App
+// eslint-disable-next-line no-unused-vars 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
-// import LoginPage from './components/LoginPage';
+import LoginPage from './components/LoginPage/LoginPage';
+import SignupPage from './components/SignupPage/SignupPage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HeatmapPage from './components/HeatmapPage/HeatmapPage';
@@ -55,12 +57,18 @@ function MyRoutes() {
   return (
     <div>
       {/* Only show Header when not on LoginPage */}
-      {location.pathname !== '/login' && <Header />}
+      {location.pathname !== '/login' && location.pathname !== '/signup' && <Header />}
       <Routes>
         <Route path="/" element={<HomePage />} />
+<<<<<<< HEAD
         {/* <Route path="/about" element={<AboutPage />} />
         <Route path="/login" element={<LoginPage />} /> */}
         <Route path='/heatmap' element={<HeatmapPage />} />
+=======
+        {/* <Route path="/about" element={<AboutPage />} /> */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage/>}/>
+>>>>>>> 7c332c7703e9042bc710f38b874b48b8c27609d3
       </Routes>
       {/* Only show Footer when not on LoginPage */}
       {location.pathname !== '/login' && <Footer />}
