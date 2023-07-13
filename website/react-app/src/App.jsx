@@ -5,8 +5,10 @@ import LoginPage from './components/LoginPage/LoginPage';
 import SignupPage from './components/SignupPage/SignupPage';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import HeatmapPage from './components/HeatmapPage/HeatmapPage';
-
+// old one
+// import HeatmapPage from './components/HeatmapPage/HeatmapPage';
+// new one
+import HeatmapPage from './components/HeatmapPage/new/HeatmapPage';
 function App() {
   return (
     <Router>
@@ -25,14 +27,14 @@ function HeaderContainer() {
 
 function MyRoutes() {
   return (
-    <div>
+    // <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path='/solutions' element={<HeatmapPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage/>}/>
       </Routes>
-    </div>
+    // </div>
   );
 }
 
